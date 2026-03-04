@@ -25,15 +25,8 @@ if (process.env.WEBHOOK_ID && process.env.WEBHOOK_TOKEN) {
 }
 
 
-const startLogs = new Discord.WebhookClient({
-    id: webhook.startLogs.id,
-    token: webhook.startLogs.token,
-});
-
-const shardLogs = new Discord.WebhookClient({
-    id: webhook.shardLogs.id,
-    token: webhook.shardLogs.token,
-});
+const startLogs = null;
+const shardLogs = null;
 
 const manager = new Discord.ShardingManager('./src/bot.js', {
     totalShards: 'auto',
